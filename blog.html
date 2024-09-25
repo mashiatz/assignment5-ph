@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+</head>
+
+<body>
+   
+      <!-- nav -->
+<header>
+
+<div class="navbar bg-[#F9F7F3]  pb-14">
+
+    <div class="navbar-start">
+    <a class="btn bg-[#B4F461] w-[110px] h-[49px] font-bold text-lg" id="home">Home</a>
+    </div>
+
+    
+      <div>
+      <img src="assets/logo.png" alt="">
+      <h3 class="ml-3 font-bold text-xl hidden lg:block">Donate Bangladesh</h3>
+     </div>
+
+    
+     <div class="navbar-end">
+        <img class="h-5 mt-3 mr-2" src="assets/coin.png" alt="">
+        <h2 class=" pt-2 font-bold text-[#111111b3]">
+        <span id="balance">5500 BDT</span>
+        </h2>
+    </div>
+    </div>
+  
+    <!--nav ends-->
+
+    
+
+    </header>
+
+
+    <div class="w-3/4 mx-auto mt-14">
+        <h3 class="text-4xl font-bold mb-7">Important FAQ</h3>
+
+        <!-- FAQ 1 -->
+        <div class="collapse collapse-arrow border border-base-300 rounded-box mb-7">
+            <input type="checkbox" />
+            <div class="collapse-title text-lg font-semibold">
+                What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</p>
+            </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="collapse collapse-arrow border border-base-300 rounded-box mb-7">
+            <input type="checkbox" />
+            <div class="collapse-title text-lg font-semibold">
+                How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+            <p> To select an element from the DOM in JavaScript, you can use various methods depending on your needs:</p>
+    <p>getElementById(): Selects a single element with a specific id.
+    Returns the element object.
+    </p>
+    <p>
+        getElementsByClassName(): Selects all elements with a specific class name.
+        Returns an HTMLCollection, which is similar to an array but not exactly the same.
+        
+    </p>
+<p>
+    getElementsByTagName(): Selects all elements with a specific tag name (like div, p, etc.).
+    Returns an HTMLCollection.
+</p>
+<p>
+    querySelector(): Selects the first element that matches a given CSS selector (e.g., by tag, class, id, or attribute).Returns the first matching element.
+</p>
+<p>
+    querySelectorAll(): Selects all elements that match a given CSS selector.
+    Returns a NodeList, which is an array-like collection that can be looped through.
+</p>
+
+</div>
+</div>
+
+        <!-- FAQ 3 -->
+        <div class="collapse collapse-arrow border border-base-300 rounded-box mb-7">
+            <input type="checkbox" />
+            <div class="collapse-title text-lg font-semibold">
+                What is event delegation in the context of the DOM and why is it useful?
+            </div>
+            <div class="collapse-content">
+                <p>
+                    Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.
+                </p>
+            </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="collapse collapse-arrow border border-base-300 rounded-box mb-7">
+            <input type="checkbox" />
+            <div class="collapse-title text-lg font-semibold">
+                How do you manipulate an element's attributes and styles using the DOM?
+            </div>
+            <div class="collapse-content">
+                <p>The classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set.</p>
+            </div>
+        </div>
+    </div>
+
+   <script src="js/home.js"></script> 
+   
+
+</body>
+
+</html>

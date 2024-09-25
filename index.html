@@ -19,14 +19,13 @@
 </head>
 <body class="lex">
 
- <header>   
+ <header class="sticky top-0 w-full bg-white/30 backdrop-blur-xl  z-50"> 
+
 <!-- nav -->
-
-
 <div class="navbar bg-[#F9F7F3]  pb-14">
 
     <div class="navbar-start">
-    <a class="btn bg-[#B4F461] w-[110px] h-[49px] font-bold text-lg" >Blog</a>
+    <a class="btn bg-[#B4F461] w-[110px] h-[49px] font-bold text-lg" id="blog">Blog</a>
     </div>
 
     
@@ -38,8 +37,8 @@
     
      <div class="navbar-end">
         <img class="h-5 mt-3 mr-2" src="assets/coin.png" alt="">
-        <h2 class=" pt-2 font-bold text-[#111111b3]">
-        <span id="balance">5500 BDT</span>
+        <h2 class=" pt-2 font-bold">
+        <span id="balance">5500</span> BDT
         </h2>
     </div>
     </div>
@@ -50,42 +49,61 @@
 
     <div class="flex justify-evenly mt-16 mb-7 ">
         <div class="flex gap-4">
-            <div class="bg-[#B4F461] w-40 h-14 text-center rounded-lg font-bold pt-3 text-lg">Donation</div>
-            <div class="w-32 rounded-lg text-center font-bold pt-3 border-2 border-solid text-lg">History
-            </div>
+            
+            <a class="btn bg-[#B4F461] w-40 h-14 font-bold text-lg" id="btn-1">Donation</a>
+           
+            <a class="btn bg-white w-40 h-14 font-bold text-lg border-2 border-solid " id="btn-2">History</a>
+
         </div>
     </div>
-</header>    
-<main>
+</header>   
+ <!--header done  -->
+<main id="main">
+    
 <!-- noakhali -->
 
-<div class="hero bg-white  border-2 border-slate-200 rounded-2xl mb-5">
-    <div class="hero-content flex-col lg:flex-row">
+<div class="hero bg-white">
+    <div class="hero-content flex-col lg:flex-row  border-2 border-slate-200 rounded-2xl mb-5">
       <img
         src="assets/noakhali.png"
         class="max-w-sm rounded-lg shadow-2xl" />
       <div>
-        <div class="navbar-end mb-4">
+        <div class="mb-4">
             <img class="h-5 mt-3 mr-2" src="assets/coin.png" alt="">
             <h2 class=" pt-2 font-bold text-[#111111b3]">
-            <span id="balance">0 BDT</span>
+            <span id="noa-balance">0 BDT</span>
             </h2>
         </div>
         <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
         <p class="py-6 text-slate-500">
             The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
         </p>
-        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
-        <div class="bg-[#B4F461] w-full h-14 text-center rounded-lg font-bold pt-3 text-lg">Donation</div>
+        <input id="noa-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
+        <button id="noa-donate" class="bg-[#B4F461] w-full h-14 text-center rounded-lg font-bold pt-3 text-lg">Donation</button>
+<!-- modal -->
+
+<div id="my-modal" class="modal mt-12">
+  <div class="modal-box border-none">
+      <h3 class="font-bold text-2xl w-2/4 my-5 mx-auto pl-3 lg:pl-11">Congrates!</h3>
+      <img class=" mx-auto my-3 " src="assets/coin.png" alt="">
+      <p class="py-4 pl-5 lg:pl-16 mx-auto my-4 ml-5 lg:ml-10">You have donated for humankind</p>
+      <h3 class="font-bold w-2/4 mx-auto text-2xl my-5 pl-5 lg:pl-11">Succesfully</h3>
+      <div class="modal-action">
+          <button id="close" class="btn mx-auto">Close Confirmation</button>
+      </div>
+  </div>
+  </div>
+<!-- modal end -->
       </div>
     </div>
-  </div>
+ 
+</div>
 
 
   <!-- feni -->
 
-  <div class="hero bg-white  border-2 border-slate-200 rounded-2xl mb-5">
-    <div class="hero-content flex-col lg:flex-row">
+  <div class="hero bg-white">
+    <div class="hero-content flex-col lg:flex-row  border-2 border-slate-200 rounded-2xl mb-5">
       <img
         src="assets/feni.png"
         class="max-w-sm rounded-lg shadow-2xl" />
@@ -93,23 +111,42 @@
         <div class="navbar-end mb-4">
             <img class="h-5 mt-3 mr-2" src="assets/coin.png" alt="">
             <h2 class=" pt-2 font-bold text-[#111111b3]">
-            <span id="balance">600 BDT</span>
+            <span id="fenibalance">600 BDT</span>
             </h2>
         </div>
         <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
         <p class="py-6 text-slate-500">
             The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
         </p>
-        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
-        <div class="bg-[#B4F461] w-full h-14 text-center rounded-lg font-bold pt-3 text-lg">Donation</div>
+        <input id="feninput" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
+        <button id="fenidonate" class="bg-[#B4F461] w-full h-14 text-center rounded-lg font-bold pt-3 text-lg">Donation</button>
+
+<!-- modal -->
+
+<div id="my-modal2" class="modal mt-12">
+  <div class="modal-box border-none">
+      <h3 class="font-bold text-3xl w-2/4 my-5 mx-auto pl-3 lg:pl-11">Congrates!</h3>
+      <img class=" mx-auto my-3 " src="assets/coin.png" alt="">
+      <p class="py-4 pl-5 lg:pl-16 mx-auto my-4 ml-5 lg:ml-10">You have donated for mankind</p>
+      <h3 class="font-bold w-2/4 mx-auto text-2xl my-5 pl-5 lg:pl-11">Successfully</h3>
+      <div class="modal-action">
+          <button id="close1" class="btn mx-auto">close confirmation</button>
+      </div>
+  </div>
+  </div>
+<!-- modal end -->
+
+
+
+
       </div>
     </div>
   </div>
 
   <!-- quota -->
 
-  <div class="hero bg-white  border-2 border-slate-200 rounded-2xl mb-5">
-    <div class="hero-content flex-col lg:flex-row">
+  <div class="hero bg-white">
+    <div class="hero-content flex-col lg:flex-row  border-2 border-slate-200 rounded-2xl mb-5">
       <img
         src="assets/quota-protest.png"
         class="max-w-sm rounded-lg shadow-2xl" />
@@ -117,37 +154,50 @@
         <div class="navbar-end mb-4">
             <img class="h-5 mt-3 mr-2" src="assets/coin.png" alt="">
             <h2 class=" pt-2 font-bold text-[#111111b3]">
-            <span id="balance">2400 BDT</span>
+            <span id="quotabalance">2400 BDT</span>
             </h2>
         </div>
         <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
         <p class="py-6 text-slate-500">
             The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
         </p>
-        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
-        <div class="bg-[#B4F461] w-full h-14 text-center rounded-lg font-bold pt-3 text-lg">Donation</div>
+        <input id="qminput" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4" />
+        <button id="qmdonate" class="bg-[#B4F461] w-full h-14 text-center rounded-lg font-bold pt-3 text-lg">Donation</button>
+
+<!-- modal -->
+
+<div id="my-modal3" class="modal mt-12">
+  <div class="modal-box border-none ">
+      <h3 class="font-bold text-2xl w-2/4 mx-auto pl-3 lg:pl-11">Congrates!</h3>
+      <img class=" mx-auto my-3 " src="assets/coin.png" alt="">
+      <p class="py-4 pl-5 lg:pl-16 mx-auto my-4 ml-5 lg:ml-10">You have donated for humankind</p>
+      <h3 class="font-bold w-2/4 mx-auto text-2xl my-5 pl-5 lg:pl-11">Succesfully</h3>
+      <div class="modal-action">
+          <button id="close3" class="btn mx-auto">Close Confirmation</button>
+      </div>
+  </div>
+  </div>
+<!-- modal end -->
+
+
+
       </div>
     </div>
   </div>
+    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div id="transaction" class=""></div>
 
 </main>
 <footer>
     <div class="footer bg-[#F9F7F3] pb-24 mt-10 "></div>
 </footer>
+
+
+<script src="js/first.js"></script>
+<script src="js/blog.js"></script>
+<script src="js/btns.js"></script>
+
 </body>
 </html>
